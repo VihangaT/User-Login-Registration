@@ -1,0 +1,19 @@
+server:
+  port: 8081
+  error:
+    include-binding-errors: always
+    include-message: always
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/erp
+    password: root
+    username: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        dialect.storage_engine: innodb
+        format_sql: true
+    show-sql: true
