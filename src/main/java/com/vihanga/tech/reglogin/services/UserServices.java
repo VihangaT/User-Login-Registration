@@ -1,5 +1,6 @@
 package com.vihanga.tech.reglogin.services;
 
+import com.vihanga.tech.reglogin.appuser.AppUser;
 import com.vihanga.tech.reglogin.repositories.UserRepositories;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,4 +23,9 @@ public class UserServices implements UserDetailsService {
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         return userRepositories.findByEmail(s).orElseThrow(() -> new UsernameNotFoundException(String.format(userNotFound, s)));
     }
+
+    public String signUoUser(AppUser appUser) {
+        return "";
+    }
+
 }
