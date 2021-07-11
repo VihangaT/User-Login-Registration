@@ -47,4 +47,28 @@ public class ConfirmationToken {
         this.expiresAt = expiredAt;
         this.appUser = appUser;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public LocalDateTime getExpiresAt() {
+        return expiresAt;
+    }
+
+    public LocalDateTime getConfirmedAt() {
+        return confirmedAt;
+    }
+
+    public AppUser getAppUser() {
+        return appUser;
+    }
 }

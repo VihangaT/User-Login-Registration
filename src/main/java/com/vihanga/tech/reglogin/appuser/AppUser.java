@@ -125,4 +125,7 @@ public class AppUser implements UserDetails {
         this.appUSerRole = appUSerRole;
     }
 
+    public String getEmail() {
+        return email;
+    }
 }
