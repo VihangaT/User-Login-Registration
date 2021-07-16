@@ -6,6 +6,7 @@ import com.vihanga.tech.reglogin.appuser.RegistrationRequest;
 import com.vihanga.tech.reglogin.registration.EmailValidator;
 import com.vihanga.tech.reglogin.registration.token.ConfirmationToken;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.time.LocalDateTime;
 
 @Service
 @AllArgsConstructor
+@NoArgsConstructor
 public class RegistrationService {
 
 

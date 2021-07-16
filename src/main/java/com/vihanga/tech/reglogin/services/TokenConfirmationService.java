@@ -15,9 +15,6 @@ import java.util.Optional;
 @NoArgsConstructor
 public class TokenConfirmationService {
     @Autowired
-    private TokenConfirmationRepository tokenConfirmationRepository;
-
-    @Autowired
     private TokenConfirmationRepository confirmationTokenRepository;
 
     public int setConfirmedAT(String token) {
@@ -29,6 +26,6 @@ public class TokenConfirmationService {
     }
 
     public void saveConfirmationToken(ConfirmationToken token) {
-        tokenConfirmationRepository.save(token);
+        confirmationTokenRepository.save(token);
     }
 }

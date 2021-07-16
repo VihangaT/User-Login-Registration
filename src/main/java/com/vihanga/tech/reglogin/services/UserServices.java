@@ -4,6 +4,7 @@ import com.vihanga.tech.reglogin.appuser.AppUser;
 import com.vihanga.tech.reglogin.registration.token.ConfirmationToken;
 import com.vihanga.tech.reglogin.repositories.UserRepositories;
 import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -17,12 +18,15 @@ import java.util.UUID;
 
 @Service
 @AllArgsConstructor
+@NoArgsConstructor
 public class UserServices implements UserDetailsService {
 
 
     private static String userNotFound = "user with email %s not found";
     @Autowired
     private UserRepositories userRepositories;
+
+    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Autowired
